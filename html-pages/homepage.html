@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Souls Blog</title>
+    <link rel="icon" type="image/png" href="../images/Dark-Souls-Favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/styles.css" />
+  </head>
+  <body>
+    <div id="page_contents">
+      <main class="contents">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <img
+              src="../images/Dark-Souls-Logo.jpg"
+              alt="Dark Souls Logo"
+              class="navbar-logo"
+              width="80"
+              height="50"
+            />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="homepage.html"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  style="color:#c2b280;"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Links to My Articles
+                </a>
+                <ul class="dropdown-menu card-body">
+                  <li>
+                    <a class="dropdown-item" href="dark-souls.html"
+                      >Dark Souls 1</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="dark-souls-2.html"
+                      >Dark Souls 2</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="dark-souls-3.html"
+                      >Dark Souls 3</a
+                    >
+                  </li>
+                  <hr class="dropdown-divider" />
+                  <li>
+                    <a class="dropdown-item" href="bloodborne.html"
+                      >Bloodborne</a
+                    >
+                  </li>
+                  <hr class="dropdown-divider" />
+                  <li>
+                    <a class="dropdown-item" href="sekiro.html"
+                      >Sekiro: Shadows Die Twice</a
+                    >
+                  </li>
+                  <hr class="dropdown-divider" />
+                  <li>
+                    <a class="dropdown-item" href="elden-ring.html"
+                      >Elden Ring</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  style="color: #c2b280;"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Links to Wikipedia
+                </a>
+                <ul class="dropdown-menu card-body">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://en.wikipedia.org/wiki/Dark_Souls"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Dark Souls</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://en.wikipedia.org/wiki/Dark_Souls_II"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Dark Souls 2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://en.wikipedia.org/wiki/Dark_Souls_III"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Dark Souls 3</a
+                    >
+                  </li>
+                  <hr class="dropdown-divider" />
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://en.wikipedia.org/wiki/Bloodborne"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Bloodborne</a
+                    >
+                  </li>
+                  <hr class="dropdown-divider" />
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://en.wikipedia.org/wiki/Sekiro:_Shadows_Die_Twice"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Sekiro: Shadows Die Twice</a
+                    >
+                  </li>
+                  <hr class="dropdown-divider" />
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://en.wikipedia.org/wiki/Elden_Ring"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Elden Ring</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true"></a>
+              </li>
+            </ul>
+            <form
+              onsubmit="searchNow(event)"
+              class="d-flex align-items-center"
+              role="search"
+            >
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                id="searchInput"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline" type="submit">
+                Search
+              </button>
+              <div
+                id="searchStatus"
+                class="ms-3 align-items-center text-muted"
+                style="display: none; white-space: nowrap; font-size: 0.9rem"
+              >
+                <div
+                  class="spinner-border spinner-border-sm me-2"
+                  role="status"
+                ></div>
+                Searching...
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <br />
+      <header
+        class="hero-banner text-center text-white d-flex align-items-center justify-content-center"
+      >
+        <div class="overlay"></div>
+        <div class="content">
+          <h1 class="display-4 fw-bold">Bearer of the Curse</h1>
+          <p class="lead">Begin your descent into madness.</p>
+        </div>
+      </header>
+      <br />
+      <h1 class="title text-center">Introduction</h1>
+      <br />
+      <div class="flex-wrapper">
+        <p class="left-text text">
+          Welcome to my web page about the video game series
+          <em>"Dark souls"</em>, and other games made by the company
+          <em>"FromSoftware"</em>. In this blog, I am going to describe each
+          game from the company in detail, and list what I both like and
+          dislike, starting with the original <em>"Dark Souls"</em> before
+          working my way through in chronological order.<br />
+          At the top of the page, there is a drop down menu; this menu has links
+          to the wikipedia pages of every game listed.
+          <strong>Alternatively</strong>, if you would like more specific
+          information about an individual game, click
+          <a
+            href="https://fextralife.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >here</a
+          >
+          for a link to the fextra-life wiki, which has a lot of very specific
+          information about all of the <em>"FromSoftware"</em> games, as well as
+          a multitude of other games.<br />
+          There are also links to a number of my different socials, incase you
+          would like to contact me with questions, feedback or would like me to elaborate
+          on any comments made. These social links include; Facebook, Instagram,
+          X, and my email address.
+        </p>
+        <div style="display: flex; justify-content: center">
+          <div class="container-box">
+            <img
+              class="seath"
+              src="../images/Seath.jpg"
+              alt="Seath the Scaleless from Dark Souls"
+              width="450"
+              height="200"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseContent"
+              style="cursor: pointer; display: block; width: 100%"
+            />
+
+            <div class="collapse" id="collapseContent">
+              <div class="card card-body ">
+                This is artwork of Seath the Scaleless from "Dark Souls 1".<br />
+                He is a holder of the Bequeathed Lord Soul Shard necessary to
+                satiate<br />
+                the Lordvessel.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <h1 class="title text-center">About Me</h1>
+      <br>
+      <div class="flex-wrapper">
+        <p class="left-text text">
+          My name is Brandon Speak, and I am from the United Kingdom. For years, I have been a massive
+          fan of these games, and I have fallen in love with every aspect of them, the longer I've played.<br>
+          My first interaction with these games would be when I was around 14 years of age, and I first picked up
+          a copy of Dark Souls 1 from my local game shop for cheap. I had heard great things about this game,
+          and also understood how notoriously difficult this game was. Still, this did not deter me, and I proceeded
+          to spend hours upon hours with this game, learning it's complex mechanics and even it's basic ones.
+          I had never played anything as intricate and truly difficult as this, but that's what made me love it even more.
+          Once I bested this game, there was no stopping me, and my addiction towards these games and their brutal difficulty
+          only grew stronger.<br>
+          This website is my very first foray into the world of web development and coding. This is absolutely the first time 
+          i've used any code at all, and it has been built entirely out of Html, CSS, and Javascript. I've done my best to make it as
+          polished and bug-free as I could, but seeings as this is my first try, there might be some things that slip through
+          the cracks. Any feedback towards this page or any other pages linked to this site would be great, as I'm determined to grow.
+          </p>
+          </div>
+      <br /><br /><br />
+      <div class="custom-carousel">
+        <div id="carouselExample" class="carousel slide mx-auto">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../images/Dark-Souls-1.webp"
+                class="d-block w-100"
+                alt="Dark Souls 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/Dark Souls 2.jpg"
+                class="d-block w-100"
+                alt="Dark Souls 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/Dark Souls 3.webp"
+                class="d-block w-100"
+                alt="Dark Souls 3"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+</main>
+      <footer style="align-items: center">
+        <div class="footer-logos">
+          <a
+            href="https://en-gb.facebook.com/login.php"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../images/Facebook Logo.png" width="50" height="50" />
+          </a>
+          <a
+            href="https://www.instagram.com/accounts/login/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="../images/Instagram Logo.png"
+              width="50"
+              height="50"
+              class="margin-left-logo"
+            />
+          </a>
+          <a
+            href="https://x.com/i/flow/login"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="../images/X-Logo.png"
+              width="50"
+              height="50"
+              class="margin-left-logo"
+            />
+          </a>
+        </div>
+        <br />
+        <p>Dark Souls Blog 2025. All rights reserved.</p>
+        <p>
+          <a href="mailto:brandon.speak26@hotmail.com"> Contact Me Via Email</a>
+          |
+          <a href="#top">Back to Top</a>
+          |
+          <a href="about.html">Portfolio</a>
+        </p>
+      </footer>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"
+      ></script>
+      <script>
+        function searchNow(event) {
+          event.preventDefault(); // stop the page from reloading
+
+          const searchValue = document.getElementById("searchInput").value;
+          alert("You searched for: " + searchValue);
+        }
+      </script>
+      <script src="../Scripts/JS-attempt.js"></script>
+    </div>
+    <script>
+      const footer = document.querySelector("footer");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              footer.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(footer);
+    </script>
+  </body>
+</html>
