@@ -58,13 +58,15 @@ footer.visible {
   transform: translateY(0);
 }
 .custom-carousel {
-    width: 70%;
+    width: 40%;
     max-height: 2000px;
     margin: 0 auto;
+    border-radius: 50px;
 }
 
 .carousel-item img {
-    height: 500px;
+    height: 425px;
+    border-radius: 50px;
 }
 
 body {
@@ -251,4 +253,8 @@ h1:hover {
 .form-control {
   border-color:#c2b280;
   border-width:2px;
+}
+.form-control:focus {
+  border-color: #c2b280;
+  box-shadow: 0 0 5px rgba(255, 140, 0, 1);
 }
