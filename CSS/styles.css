@@ -1,3 +1,59 @@
+:root {
+  --ds-tooltip-bg:    #2b1b0e;  
+  --ds-tooltip-fg:    #f8d173;  
+  --ds-tooltip-border:#5c3a1d;  
+  --ds-tooltip-shadow:rgba(0,0,0,.8);
+  --ds-tooltip-radius:4px;
+  --ds-tooltip-pad:   6px 10px;
+  --ds-tooltip-z:     1200;
+  --ds-tooltip-font:  "Cinzel", serif;
+  --ds-tooltip-size:  .9rem;
+}
+/* 1. Style the inner tooltip box */
+.dark-souls-tooltip .tooltip-inner {
+  background-color: var(--ds-tooltip-bg);
+  color: var(--ds-tooltip-fg);
+  border: 1px solid var(--ds-tooltip-border);
+  border-radius: var(--ds-tooltip-radius);
+  padding: var(--ds-tooltip-pad);
+  box-shadow: 0 2px 6px var(--ds-tooltip-shadow);
+  font-family: var(--ds-tooltip-font);
+  font-size: var(--ds-tooltip-size);
+  white-space: nowrap;
+  z-index: var(--ds-tooltip-z);
+}
+
+/* 2. Restyle the arrow for top-positioned tooltips */
+.dark-souls-tooltip.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: var(--ds-tooltip-bg) !important;
+}
+
+/* 3. Add parchment-grunge overlay inside the inner box */
+.dark-souls-tooltip .tooltip-inner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("/assets/parchment-grunge.png") center/cover no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* 4. Fade-in + float animation */
+@keyframes ds-float-in {
+  0%   { opacity: 0; transform: translateY(5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.dark-souls-tooltip.bs-tooltip-show .tooltip-inner {
+  animation: ds-float-in 0.25s ease-out forwards;
+}
+.dark-souls-tooltip .tooltip-inner {
+  max-width: 200px;       /* adjust to taste */
+  white-space: normal;    /* allow line breaks */
+  text-align: center;     /* center‐aligned labels */
+}
+
 html, body {
   height:100%;
   margin:0;
@@ -64,6 +120,12 @@ footer.visible {
     border-radius: 50px;
 }
 
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 .carousel-item img {
     height: 425px;
     border-radius: 50px;
