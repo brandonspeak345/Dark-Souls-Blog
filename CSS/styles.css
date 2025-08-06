@@ -70,7 +70,7 @@ footer.visible {
 }
 
 body {
-    cursor: url(images/Dark-Souls-Cursor.cur), auto;
+    cursor: url(../images/Dark-Souls-Cursor.cur), auto;
     font-display:swap;
 }
 
