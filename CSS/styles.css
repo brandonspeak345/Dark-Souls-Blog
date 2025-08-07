@@ -120,12 +120,7 @@ footer.visible {
     border-radius: 50px;
 }
 
-.carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+
 .carousel-item img {
     height: 425px;
     border-radius: 50px;
