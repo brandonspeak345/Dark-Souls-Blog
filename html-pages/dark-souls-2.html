@@ -178,16 +178,19 @@
                   <a class="nav-link disabled" aria-disabled="true"></a>
                 </li>
               </ul>
-              <form class="d-flex" role="search">
+              <form
+                onsubmit="searchNow(event)"
+                class="d-flex align-items-center"
+                role="search"
+              >
                 <input
                   class="form-control me-2"
                   type="search"
                   placeholder="Search"
+                  id="searchInput"
                   aria-label="Search"
                 />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
+                <button class="btn btn-outline" type="submit">Search</button>
               </form>
             </div>
           </div>
@@ -243,22 +246,7 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"
       ></script>
+      <script src="../Scripts/JS-attempt.js"></script>
     </div>
-    <script>
-      const footer = document.querySelector("footer");
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              footer.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-
-      observer.observe(footer);
-    </script>
   </body>
 </html>
